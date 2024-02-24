@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sound_notifier *.css
+recursive-include sound_notifier *.csv
+recursive-include sound_notifier *.html
+recursive-include sound_notifier *.ico
+recursive-include sound_notifier *.js
+recursive-include sound_notifier *.json
+recursive-include sound_notifier *.md
+recursive-include sound_notifier *.png
+recursive-include sound_notifier *.py
+recursive-include sound_notifier *.svg
+recursive-include sound_notifier *.txt
+recursive-exclude sound_notifier *.pyc
