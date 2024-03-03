@@ -14,6 +14,14 @@ app_license = "MIT"
 # app_include_css = "/assets/sound_notifier/css/sound_notifier.css"
 # app_include_js = "/assets/sound_notifier/js/sound_notifier.js"
 
+# app_include_js = "/assets/your_app/js/your_file.js"
+app_include_js = "/assets/sound_notifier/js/notification_manager.js"
+# app_include_js = [
+#     "/assets/sound_notifier/js/notifier.js",
+#     # "public/js/notifier.js"
+# ]
+
+
 # include js, css files in header of web template
 # web_include_css = "/assets/sound_notifier/css/sound_notifier.css"
 # web_include_js = "/assets/sound_notifier/js/sound_notifier.js"
@@ -119,6 +127,13 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
+#     "Notification Log" :{
+#         "before_insert": "sound_notifier.utils.notification_manager.emit_notification",
+#         "validate": "sound_notifier.utils.notification_manager.emit_notification",
+#         "autoname": "sound_notifier.utils.notification_manager.emit_notification",
+#         "on_submit": "sound_notifier.utils.notification_manager.emit_notification",
+#     }
+# }
 #	"*": {
 #		"on_update": "method",
 #		"on_cancel": "method",
