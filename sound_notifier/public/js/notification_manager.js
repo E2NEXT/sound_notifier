@@ -56,7 +56,11 @@ function playNotificationSound() {
 
 async function updateLastNotification(user, notificationLogName, lastNotificationName) {
     if (lastNotificationName) {
-        await frappe.db.set_value('Last Notification', lastNotificationName, 'notification_log', notificationLogName,ignore_permissions=True);
+
+        let lastNotification = await frappe.db.get_doc('Last Notification', lastNotificationName);
+        lastNotification.notification_log = notificationLogName;
+        await frappe.db.set_value('Last Notification', lastNotification.name, 'notification_log', notificationLogName,ignore_permissions=true);
+
     } else {
         await frappe.call({
             method: 'frappe.client.insert',
@@ -66,7 +70,7 @@ async function updateLastNotification(user, notificationLogName, lastNotificatio
                     user: user,
                     notification_log: notificationLogName
                 },
-                ignore_permissions: true 
+                ignore_permissions: true
             }
         });
     }
