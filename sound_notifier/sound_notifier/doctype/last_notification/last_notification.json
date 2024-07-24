@@ -15,22 +15,19 @@
    "fieldname": "notification_log",
    "fieldtype": "Link",
    "label": "Notification Log",
-   "options": "Notification Log",
-   "read_only": 1
+   "options": "Notification Log"
   },
   {
    "fieldname": "user",
    "fieldtype": "Link",
    "label": "User",
    "options": "User",
-   "read_only": 1,
    "unique": 1
   }
  ],
- "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-05 11:04:13.392423",
+ "modified": "2024-07-24 10:37:53.601743",
  "modified_by": "Administrator",
  "module": "Sound Notifier",
  "name": "Last Notification",
@@ -49,6 +46,7 @@
    "write": 1
   }
  ],
+ "read_only": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
